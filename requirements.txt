@@ -1,8 +1,0 @@
-
-deepface
-opencv-python
-numpy
-pyttsx3
-qrcode[pil]
-Flask
-

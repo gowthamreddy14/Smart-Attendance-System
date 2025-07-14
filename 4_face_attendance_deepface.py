@@ -98,7 +98,9 @@ while True:
                 if student_id not in marked_today:
                     now = datetime.now()
                     time_now = now.strftime('%H:%M:%S')
-                    status = "On Time" if time_now <= "09:30:00" else "Late"
+                    status = "On Time" if time_now <= "09:30:00"  else "Late"
+
+                    
                     conn.execute('INSERT INTO attendance (student_id, date, time, status, method) VALUES (?, ?, ?, ?, ?)',
                                 (student_id, today, time_now, status, 'DeepFace'))
                     conn.commit()
